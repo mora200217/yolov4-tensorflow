@@ -4,6 +4,8 @@ YOLOv4 Implementation in tensorflow 2.6.
 ## YOLO 
 The arch is divided in three (3) modules/stages. Backbone -> Head -> Neck, which describes the entire pipeline from an 416x416 RGB input image to a 3-scaled detection tensor, with the predicted classified bounding boxes for each element within the image.
 
+<img src = "https://miro.medium.com/max/1400/1*i-n2dbPsve5qP_7f0YrngQ.png" width = "100%" style = "margin-left: 200px; "/>
+
 ## Stages:
 ### 1. Backbone (CSP Darknet 53)
 It takes the input image an extract the feature maps from a *53 layered* shortcut based (```residual block```) convolutional pyramid. Each convolution is a ```convbn``` block, build up from 2d convolution, batch normalization and a Mish activation function (Bag of Specials).
